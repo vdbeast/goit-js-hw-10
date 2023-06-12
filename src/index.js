@@ -50,7 +50,7 @@ function catInfo(breedId) {
             loadingEl.style.display = 'none';
             errorEl.style.display = 'none';
             selectEl.style.display = 'block';
-            modalEl.style.display = 'block';
+            modalEl.style.display = 'flex';
         })
         .catch(error => {
             console.log('error', error);
