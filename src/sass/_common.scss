@@ -1,0 +1,42 @@
+@import '~node_modules/modern-normalize/modern-normalize.css';
+
+
+.cat-info {
+ display: flex;
+ gap: 10px;
+ margin-top: 10px;
+}
+
+.loader {
+    display: block;
+    position: relative;
+    height: 12px;
+    width: 20%;
+    border: 1px solid #050000;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.loader::after {
+    content: '';
+    width: 40%;
+    height: 100%;
+    background: #FF3D00;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    animation: animloader 2s linear infinite;
+}
+
+@keyframes animloader {
+    0% {
+        left: 0;
+        transform: translateX(-100%);
+    }
+
+    100% {
+        left: 100%;
+        transform: translateX(0%);
+    }
+}
