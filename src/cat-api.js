@@ -10,11 +10,6 @@ function fetchBreeds() {
             }
             return resp.json();
         })
-        .catch(err => {
-            console.log(err);
-            showError(err.message);
-            throw err;
-        });
 }
 
 function fetchCatByBreed(breedId) {
@@ -32,11 +27,6 @@ function fetchCatByBreed(breedId) {
         .then(data => {
             return data[0];
         })
-        .catch(err => {
-            console.log(err);
-            showError(err.message);
-            throw err;
-        });
 }
 
 export { fetchBreeds, fetchCatByBreed }
